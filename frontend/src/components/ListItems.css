@@ -1,0 +1,22 @@
+.ListItemsListItem {
+  width: 50%;
+  background-color: red;
+  margin: auto;
+  text-align: left;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.ListItemsButtonGroup {
+  display: inline;
+  float: right;
+  margin-right:10px
+}
+
+.ListItemsItemText {
+  display: inline;
+  color: white;
+  margin-left: 15px;
+}
