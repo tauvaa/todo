@@ -24,7 +24,7 @@ services:
     depends_on:
       - database
     ports:
-      - 8000:5000
+      - 8000:8000
     networks:
       test:
         ipv4_address: 172.18.0.12
@@ -33,7 +33,7 @@ services:
     image: postgres:15.1-alpine
     ports:
       - 5434:5432
-        #env_file: postgres.env
+    env_file: postgres.env
     volumes:
       - ./data:/var/lib/postgres/data
         # - ./db_files/1-messages.sql:/docker-entrypoint-initdb.d/01-messages.sql
