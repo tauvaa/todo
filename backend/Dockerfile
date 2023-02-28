@@ -10,6 +10,13 @@ run pip install -r requirements.txt
 # ENV message_board_user comp_user
 # ENV message_board_password password
 # ENV message_board_database message_board
+
+ENV DBUSER postgres
+ENV DBPASSWORD postgres
+ENV DBHOST 172.18.0.11
+ENV DBDATABASE todo
+ENV DBPORT 5432
+
 expose 8000
 # cmd ["python","app.py"]
 cmd ["python3", "manage.py","runserver", "0.0.0.0:8000"]
