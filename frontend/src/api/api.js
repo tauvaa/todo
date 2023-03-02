@@ -16,4 +16,10 @@ const deleteToDoItem = (itemId) => {
     axios.delete(durl);
 };
 
-export { get_todo_items, addToDoItem, deleteToDoItem };
+const EditToDoItem = (itemId, editData) =>{
+
+    const durl = `${URL}/todo/${itemId}/`;
+    axios.put(durl, editData);
+}
+
+export { get_todo_items, addToDoItem, deleteToDoItem ,EditToDoItem};
