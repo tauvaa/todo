@@ -6,4 +6,14 @@ const get_todo_items = (callback) => {
     axios.get(`${URL}/todo/`).then((e) => callback(e));
 };
 
-export { get_todo_items };
+const addToDoItem = (toAdd) => {
+    const data = { to_do_item: toAdd };
+    axios.post(`${URL}/todo/`, data);
+};
+
+const deleteToDoItem = (itemId) => {
+    const durl = `${URL}/todo/${itemId}/`;
+    axios.delete(durl);
+};
+
+export { get_todo_items, addToDoItem, deleteToDoItem };
